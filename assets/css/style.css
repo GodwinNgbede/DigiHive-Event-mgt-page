@@ -13,9 +13,13 @@ header {
 header nav {
   margin-left: auto;
 }
+
 header nav a {
   margin: 0 25px;
   text-decoration: none;
+}
+.fa-bars {
+  visibility: hidden;
 }
 .fa-search {
   background-color: #c4c4c4;
@@ -49,4 +53,39 @@ form button {
   cursor: pointer;
   background-color: #c4c4c4 !important;
   color: #fff;
+}
+@media (max-width: 768px) {
+  header,
+  div {
+    padding: 0 35px 0 25px;
+  }
+  header {
+    position: relative;
+  }
+  .fa-bars {
+    visibility: visible;
+    position: absolute;
+    right: 80px;
+    top: 40px;
+
+    font-size: 1.5rem;
+  }
+  header nav {
+    visibility: hidden;
+  }
+  .hero {
+    padding-top: 20px;
+  }
+  form {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px;
+  }
+  form select {
+    flex-basis: calc(50% - 5px);
+  }
+  form button {
+    flex-basis: 100%;
+    margin-top: 10px;
+  }
 }
